@@ -5,6 +5,7 @@
     background: #A82FFC;
     flex-direction: column;
     min-width: 500px;
+    border-radius: 10px;
 }
 
 .h1 {
