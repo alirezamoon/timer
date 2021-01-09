@@ -23,7 +23,8 @@ class Timer extends React.Component {
         clearInterval(this.state.second)
     }
     reset = () => {
-
+        clearInterval(this.state.second)
+        this.setState({time : 0})
     }
 
     render() {
@@ -38,7 +39,8 @@ class Timer extends React.Component {
                 <p className={classes.time}>{this.state.time}</p>
                 <TimerControl
                     start={this.start}
-                    stop={this.stop} />
+                    stop={this.stop}
+                    reset={this.reset} />
             </div>
         )
 
