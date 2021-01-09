@@ -9,18 +9,18 @@ class Timer extends React.Component {
 
 
     state = {
-        time: 0
+        time: 0,
+        second: 0
     }
 
 
     start = () => {
-        setInterval(() => {
+        this.setState({second :  setInterval(() => {
             this.setState({ time: this.state.time + 1 })
-        }, 1000);
-
+        }, 1000)});
     }
     stop = () => {
-
+        clearInterval(this.state.second)
     }
     reset = () => {
 
@@ -37,7 +37,8 @@ class Timer extends React.Component {
                 <h1 className={classes.h1}>T I M E R</h1>
                 <p className={classes.time}>{this.state.time}</p>
                 <TimerControl
-                    start={this.start} />
+                    start={this.start}
+                    stop={this.stop} />
             </div>
         )
 
