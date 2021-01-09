@@ -1,0 +1,15 @@
+.TimerControl {
+    margin: 20px 0;
+}
+
+
+.btn {
+    background-color: #300065;
+    color: #FFF;
+    border: none;
+    margin: 0 10px;
+    padding: 10px 5px;
+    min-width: 75px;
+    border-radius: 5px;
+    font-family: cursive;
+}
