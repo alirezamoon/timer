@@ -1,1 +1,7 @@
-@import 'reset.css'
+@import 'reset.css';
+
+@font-face{
+    font-family: 'digital7';
+    src: url(./assets/fonts/digital7/digital-7.ttf),
+         url(./assets/fonts/digital7/digital-7\ \(italic\).ttf)
+}

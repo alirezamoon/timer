@@ -36,7 +36,7 @@ class Timer extends React.Component {
                         hour: this.state.hour + 1
                     })
                 }
-            }, 1),
+            }, 1000),
             started: true,
             starting: true
         });

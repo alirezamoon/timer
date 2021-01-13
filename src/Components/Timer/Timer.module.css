@@ -22,7 +22,7 @@
     font-weight: bold;
     color: #FFF;
     margin: 20px 0;  
-    /* font-family: orbitron; */
+    font-family: 'digital7';
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,4 +30,5 @@
 .time span {
   width: 45px;
   text-align: center;
+
 }
