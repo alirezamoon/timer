@@ -12,11 +12,14 @@ class Timer extends React.Component {
         second: 0,
         minute: 0,
         hour: 0,
-        time: 0
+        time: 0,
+        started: false,
+        starting: false
     }
 
 
     start = () => {
+
         this.setState({
             time: setInterval(() => {
                 if (this.state.second < 59) {
@@ -33,17 +36,21 @@ class Timer extends React.Component {
                         hour: this.state.hour + 1
                     })
                 }
-            }, 1000)
+            }, 1),
+            started: true,
+            starting: true
         });
     }
     stop = () => {
         clearInterval(this.state.time)
+        this.setState({ started: false })
     }
     reset = () => {
         clearInterval(this.state.time)
-        this.setState({ second: 0, minute: 0, hour: 0 })
+        this.setState({ second: 0, minute: 0, hour: 0, started: false, starting: false })
 
     }
+
 
     render() {
 
@@ -55,14 +62,16 @@ class Timer extends React.Component {
             <div className={classes.Timer}>
                 <h1 className={classes.h1}>T I M E R</h1>
                 <p className={classes.time}>
-                    <span>{this.state.hour < 10 ? `0${this.state.hour}` : this.state.hour}</span>&nbsp;:&nbsp; 
-                    <span>{this.state.minute < 10 ? `0${this.state.minute}` : this.state.minute}</span>&nbsp;:&nbsp; 
+                    <span>{this.state.hour < 10 ? `0${this.state.hour}` : this.state.hour}</span>&nbsp;:&nbsp;
+                    <span>{this.state.minute < 10 ? `0${this.state.minute}` : this.state.minute}</span>&nbsp;:&nbsp;
                     <span>{this.state.second < 10 ? `0${this.state.second}` : this.state.second}</span>
                 </p>
                 <TimerControl
                     start={this.start}
                     stop={this.stop}
-                    reset={this.reset} />
+                    reset={this.reset}
+                    started={this.state.started}
+                    starting={this.state.starting} />
             </div>
         )
 
