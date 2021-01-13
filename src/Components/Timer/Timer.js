@@ -30,10 +30,10 @@ class Timer extends React.Component {
                 if (this.state.minute === 59 && this.state.second === 59) {
                     this.setState({
                         minute: 0,
-                        hour: this.state.hour + 1 
+                        hour: this.state.hour + 1
                     })
                 }
-            }, 1)
+            }, 1000)
         });
     }
     stop = () => {
@@ -41,7 +41,7 @@ class Timer extends React.Component {
     }
     reset = () => {
         clearInterval(this.state.time)
-        this.setState({ second: 0 , minute : 0 , hour : 0})
+        this.setState({ second: 0, minute: 0, hour: 0 })
 
     }
 
@@ -54,7 +54,11 @@ class Timer extends React.Component {
         return (
             <div className={classes.Timer}>
                 <h1 className={classes.h1}>T I M E R</h1>
-                <p className={classes.time}>{this.state.hour} : {this.state.minute} : {this.state.second}</p>
+                <p className={classes.time}>
+                    <span>{this.state.hour < 10 ? `0${this.state.hour}` : this.state.hour}</span>&nbsp;:&nbsp; 
+                    <span>{this.state.minute < 10 ? `0${this.state.minute}` : this.state.minute}</span>&nbsp;:&nbsp; 
+                    <span>{this.state.second < 10 ? `0${this.state.second}` : this.state.second}</span>
+                </p>
                 <TimerControl
                     start={this.start}
                     stop={this.stop}

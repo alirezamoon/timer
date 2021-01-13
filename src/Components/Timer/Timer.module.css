@@ -22,5 +22,12 @@
     font-weight: bold;
     color: #FFF;
     margin: 20px 0;  
-  
+    /* font-family: orbitron; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.time span {
+  width: 45px;
+  text-align: center;
 }
