@@ -60,7 +60,7 @@ class Timer extends React.Component {
 
         return (
             <div className={classes.Timer}>
-                <h1 className={classes.h1}>T I M E R</h1>
+                <h1 className={classes.h1}>TIMER</h1>
                 <p className={classes.time}>
                     <span>{this.state.hour < 10 ? `0${this.state.hour}` : this.state.hour}</span>&nbsp;:&nbsp;
                     <span>{this.state.minute < 10 ? `0${this.state.minute}` : this.state.minute}</span>&nbsp;:&nbsp;
