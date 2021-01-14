@@ -1,13 +1,9 @@
 .Timer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #A82FFC;
-    flex-direction: column;
-    min-width: 500px;
-    border-radius: 10px;
-    box-shadow: 1px 1px 5px #300065;
-    border: 7px solid #300065;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
 }
 
 .h1 {
@@ -15,20 +11,25 @@
   font-size: 32px;
   font-weight: bold;
   color: #300065;
-  margin: 20px 0;  
+  margin: 20px 0;
 }
 .time {
-    font-size: 30px;
-    font-weight: bold;
-    color: #FFF;
-    margin: 20px 0;  
-    font-family: 'digital7';
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  min-width: 500px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px #300065;
+  border: 7px solid #300065;
+  background: #a82ffc;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  margin: 20px 0;
+  font-family: "digital7";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
 }
 .time span {
   width: 45px;
   text-align: center;
-
 }
