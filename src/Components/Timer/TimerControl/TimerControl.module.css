@@ -12,19 +12,35 @@
   border-radius: 5px;
   font-family: "digital7";
   font-size: 24px;
+  cursor: pointer;
+  box-sizing: border-box;
 }
 
 .btn:active {
   position: relative;
   top: 2px;
 }
-
+.btn:focus{
+    border: inset;
+}
+.btn:hover {
+    background-color: #a82ffc;
+}
 .success {
-  color: #0f0;
+  color: #4CAF50;
+}
+.success:hover {
+    border-color: #4CAF50 !important;
 }
 .danger {
-  color: #f00;
+  color: #f44336;
+}
+.danger:hover {
+    border-color: #f44336 !important;
 }
 .warning {
-  color: #ffff00;
+  color: orange;
+}
+.warning:hover {
+    border-color: #ff9800 !important; 
 }
