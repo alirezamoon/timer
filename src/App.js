@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div className={classes.App}>
       <Timer />
-      <div className={classes.line}></div>
+
     </div>
   );
 }

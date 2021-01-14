@@ -60,18 +60,28 @@ class Timer extends React.Component {
 
         return (
             <div className={classes.Timer}>
-                <h1 className={classes.h1}>TIMER</h1>
-                <p className={classes.time}>
-                    <span>{this.state.hour < 10 ? `0${this.state.hour}` : this.state.hour}</span>&nbsp;:&nbsp;
-                    <span>{this.state.minute < 10 ? `0${this.state.minute}` : this.state.minute}</span>&nbsp;:&nbsp;
-                    <span>{this.state.second < 10 ? `0${this.state.second}` : this.state.second}</span>
-                </p>
-                <TimerControl
-                    start={this.start}
-                    stop={this.stop}
-                    reset={this.reset}
-                    started={this.state.started}
-                    starting={this.state.starting} />
+                <div className={classes.timeCard}>
+                    <h1 className={classes.h1}>T I M E R</h1>
+                    <div className={classes.line}></div>
+                </div>
+                <div className={classes.timeCard}>
+                    <p className={classes.time}>
+                        <span>{this.state.hour < 10 ? `0${this.state.hour}` : this.state.hour}</span>&nbsp;:&nbsp;
+                        <span>{this.state.minute < 10 ? `0${this.state.minute}` : this.state.minute}</span>&nbsp;:&nbsp;
+                        <span>{this.state.second < 10 ? `0${this.state.second}` : this.state.second}</span>
+                    </p>
+                    <div className={classes.line}></div>
+
+                </div>
+                <div className={classes.timeCard}>
+                    <TimerControl
+                        start={this.start}
+                        stop={this.stop}
+                        reset={this.reset}
+                        started={this.state.started}
+                        starting={this.state.starting} />
+                    <div className={classes.line}></div>
+                </div>
             </div>
         )
 

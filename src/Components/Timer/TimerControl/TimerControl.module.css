@@ -1,33 +1,30 @@
 .TimerControl {
-    margin: 20px 0;
+  margin: 20px 0;
+  /* background-color: #fff; */
 }
 
-
 .btn {
-    background-color: #300065;
-    border: 2px solid #D189FF;
-    color: #D189FF;
-    margin: 0 10px;
-    padding: 10px 5px;
-    width: 100px;
-    border-radius: 5px;
-    font-family: 'digital7';
-    font-size: 24px;
+  background-color: #7a08fa;
+  border: 2px solid #300065;
+  margin: 0 10px;
+  padding: 10px 5px;
+  width: 100px;
+  border-radius: 5px;
+  font-family: "digital7";
+  font-size: 24px;
 }
 
 .btn:active {
-    position: relative;
-    top: 2px
+  position: relative;
+  top: 2px;
 }
-
 
 .success {
-    color: #0f0;
+  color: #0f0;
 }
-.danger{
-    color: #f00;
+.danger {
+  color: #f00;
 }
-.warning{
-    color: rgb(255, 255, 0);
+.warning {
+  color: #ffff00;
 }
-
