@@ -1,12 +1,13 @@
 .TimerControl {
     margin: 20px 0;
+    /* background-color: #fff; */
 }
 
 
 .btn {
-    background-color: #300065;
-    border: 2px solid #D189FF;
-    color: #D189FF;
+    background-color: #7a08fa;
+    border: 2px solid #300065;
+    /* color: #D189FF; */
     /* border: none; */
     margin: 0 10px;
     padding: 10px 5px;
@@ -28,6 +29,6 @@
     color: #f00;
 }
 .warning{
-    color: rgb(255, 255, 0);
+    color: #FFFF00;
 }
 

@@ -5,10 +5,3 @@
     height: 100vh;
     box-sizing: border-box;
 }
-
-.line {
-    position: absolute;
-    width: 100%;
-    border-bottom: 10px solid #300065;
-    z-index: -100;
-}
