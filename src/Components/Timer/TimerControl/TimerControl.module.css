@@ -1,6 +1,7 @@
 .TimerControl {
   margin: 20px 0;
   /* background-color: #fff; */
+
 }
 
 .btn {
@@ -43,4 +44,16 @@
 }
 .warning:hover {
     border-color: #ff9800 !important; 
+}
+
+
+@media only screen and (max-width : 520px) {
+  .TimerControl {
+    display: flex;
+    flex-direction: column;
+    height: 106px;
+  }
+  .btn {
+    margin-bottom: 10px;
+  }
 }
