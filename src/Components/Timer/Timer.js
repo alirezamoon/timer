@@ -5,6 +5,8 @@ import classes from './Timer.module.css'
 import TimerControl from './TimerControl/TimerControl'
 import Time from './Time/Time'
 
+import TimeContext from '../Context/timeContext'
+import ControlContext from './../Context/controlContext'
 
 class Timer extends React.Component {
 
@@ -60,30 +62,37 @@ class Timer extends React.Component {
 
 
         return (
-            <div className={classes.Timer}>
-                <div className={classes.timeCard}>
-                    <h1 className={classes.h1}>T I M E R</h1>
-                    <div className={classes.line}></div>
-                </div>
-                <div className={classes.timeCard}>
-                    <Time
-                        hour={this.state.hour}
-                        minute={this.state.minute}
-                        second={this.state.second}
-                    />
-                    <div className={classes.line}></div>
+            <TimeContext.Provider value={{
+                hour: this.state.hour,
+                minute: this.state.minute,
+                second: this.state.second,
 
-                </div>
-                <div className={classes.timeCard}>
-                    <TimerControl
-                        start={this.start}
-                        stop={this.stop}
-                        reset={this.reset}
-                        started={this.state.started}
-                        starting={this.state.starting} />
-                    <div className={classes.line}></div>
-                </div>
-            </div>
+
+            }}>
+                <ControlContext.Provider value={{
+                    start: () => this.start,
+                    stop: () => this.stop,
+                    reset: () => this.reset,
+                    started: this.state.started,
+                    starting: this.state.starting
+                }}>
+                    <div className={classes.Timer}>
+                        <div className={classes.timeCard}>
+                            <h1 className={classes.h1}>T I M E R</h1>
+                            <div className={classes.line}></div>
+                        </div>
+                        <div className={classes.timeCard}>
+                            <Time />
+                            <div className={classes.line}></div>
+
+                        </div>
+                        <div className={classes.timeCard}>
+                            <TimerControl />
+                            <div className={classes.line}></div>
+                        </div>
+                    </div>
+                </ControlContext.Provider>
+            </TimeContext.Provider>
         )
 
     }
