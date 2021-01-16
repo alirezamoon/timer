@@ -3,6 +3,7 @@
 import React from 'react'
 import classes from './Timer.module.css'
 import TimerControl from './TimerControl/TimerControl'
+import Time from './Time/Time'
 
 
 class Timer extends React.Component {
@@ -65,11 +66,11 @@ class Timer extends React.Component {
                     <div className={classes.line}></div>
                 </div>
                 <div className={classes.timeCard}>
-                    <p className={classes.time}>
-                        <span>{this.state.hour < 10 ? `0${this.state.hour}` : this.state.hour}</span>&nbsp;:&nbsp;
-                        <span>{this.state.minute < 10 ? `0${this.state.minute}` : this.state.minute}</span>&nbsp;:&nbsp;
-                        <span>{this.state.second < 10 ? `0${this.state.second}` : this.state.second}</span>
-                    </p>
+                    <Time
+                        hour={this.state.hour}
+                        minute={this.state.minute}
+                        second={this.state.second}
+                    />
                     <div className={classes.line}></div>
 
                 </div>
