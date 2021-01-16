@@ -70,9 +70,9 @@ class Timer extends React.Component {
 
             }}>
                 <ControlContext.Provider value={{
-                    start: () => this.start,
-                    stop: () => this.stop,
-                    reset: () => this.reset,
+                    start: this.start,
+                    stop: this.stop,
+                    reset: this.reset,
                     started: this.state.started,
                     starting: this.state.starting
                 }}>
